@@ -42,7 +42,7 @@
 				globalConsole = document.getElementsByTagName('textarea')[0];
 				
 				thisName = "[User_"+ Math.floor(Math.random() * 32000) + "]";
-				
+
 
 			}
 			
@@ -108,7 +108,9 @@
 	
 	<script>
 		// 1. 웹소켓 클라이언트 객체 생성
-		const webSocket = new WebSocket("ws://freeforregist12-nodewebsocket.herokuapp.com:80");
+		
+		var HOST = location.origin.replace(/^http/, 'ws');
+		const webSocket = new WebSocket(HOST);
 		
 		// 2. 웹소켓 이벤트 처리 // 2-1) 연결 이벤트 처리
 		
