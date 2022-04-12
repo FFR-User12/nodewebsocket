@@ -1,6 +1,8 @@
 const path = require("path");
 const express = require('express'); const app = express();
 
+var svPort = process.env.PORT || 3000;
+
 
 
 app.use("/", (req, res)=>{
@@ -9,8 +11,8 @@ app.use("/", (req, res)=>{
 }) // 3. 30001 port에서 서버 구동
 
 
-const HTTPServer = app.listen(30001, ()=>{
-	console.log("Server is open at port:30001");
+const HTTPServer = app.listen(svPort, ()=>{
+	console.log("Server is open");
 }); // WebSocekt 서버(ws) 생성 및 구동 // 1. ws 모듈 취득
 
 
